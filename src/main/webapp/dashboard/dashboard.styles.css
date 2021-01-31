@@ -26,14 +26,6 @@
   position: sticky;
 }
 
-/*.container {*/
-/*  padding-top: 75px;*/
-/*}*/
-
-/*.fixedElement {*/
-/*  !*background-color: #c0c0c0;*!*/
-/*  position: fixed;*/
-/*  !*top: 10;*!*/
-/*  width: 100%;*/
-/*  z-index: 1;*/
-/*}*/
+.container {
+  padding-top: 75px;
+}
