@@ -1,0 +1,39 @@
+.wbdv-sticky-nav-bar {
+  background-color: lightblue;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+.wbdv-nonesticky-nav-bar {
+  background-color: lightblue;
+  padding: 10px;
+  width: 100%;
+  z-index: 1;
+}
+
+
+.test {
+  background-color: lightblue;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+.th {
+  position: sticky;
+}
+
+/*.container {*/
+/*  padding-top: 75px;*/
+/*}*/
+
+/*.fixedElement {*/
+/*  !*background-color: #c0c0c0;*!*/
+/*  position: fixed;*/
+/*  !*top: 10;*!*/
+/*  width: 100%;*/
+/*  z-index: 1;*/
+/*}*/
