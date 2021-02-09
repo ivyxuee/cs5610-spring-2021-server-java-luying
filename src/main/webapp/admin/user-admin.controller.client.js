@@ -117,8 +117,8 @@ function updateUser() {
   adminUserService.updateUser(selectedUser._id, selectedUser).then(status => {
     var index = users.findIndex(user => user._id === selectedUser._id)
     users[index] = selectedUser
-    renderUsers(users)
   })
+  renderUsers(users)
   selectedUser = null
 
 }
