@@ -16,59 +16,59 @@
   <script src="user-admin.controller.client.js"></script>
 </head>
 <body>
-<!--<div class="container">-->
-<div class="form-group-row">
-  <h1 class="col-6">
-    User Admin
-  </h1>
-  <a href="../index.html" class="float-right" style="color:black">home</a>
-</div>
-<table class="table">
-  <thead>
-  <tr>
-    <th>Username</th>
-    <th>Password</th>
-    <th>First Name</th>
-    <th>Last Name</th>
-    <th>Role</th>
-    <th>&nbsp;</th>
-  </tr>
-  <tr class="wbdv-form">
-    <td><input id="usernameFld" class="form-control"
-               placeholder="Username"/></td>
-    <td><input id="passwordFld" type="password" class="form-control"
-               placeholder="Password"/></td>
-    <td><input id="firstNameFld" class="form-control"
-               placeholder="First Name"/></td>
-    <td><input id="lastNameFld" class="form-control"
-               placeholder="Last Name"/></td>
-    <td><select id="roleFld" class="form-control">
-      <option value="FACULTY">Faculty</option>
-      <option value="STUDENT">Student</option>
-      <option value="ADMIN">Admin</option>
-    </select></td>
-    <td><span class="pull-right" style="white-space: nowrap">
+<div class="container">
+  <div class="form-group-row">
+    <h1 class="col-6">
+      User Admin
+    </h1>
+    <a href="../index.html" class="float-right" style="color:black">home</a>
+  </div>
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Username</th>
+      <th>Password</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Role</th>
+      <th>&nbsp;</th>
+    </tr>
+    <tr class="wbdv-form">
+      <td><input id="usernameFld" class="form-control"
+                 placeholder="Username"/></td>
+      <td><input id="passwordFld" type="password" class="form-control"
+                 placeholder="Password"/></td>
+      <td><input id="firstNameFld" class="form-control"
+                 placeholder="First Name"/></td>
+      <td><input id="lastNameFld" class="form-control"
+                 placeholder="Last Name"/></td>
+      <td><select id="roleFld" class="form-control">
+        <option value="FACULTY">Faculty</option>
+        <option value="STUDENT">Student</option>
+        <option value="ADMIN">Admin</option>
+      </select></td>
+      <td><span class="pull-right" style="white-space: nowrap">
         <i class="fa-2x fa fa-search wbdv-search"></i>
         <i id="createBtnId" class="fa-2x fa fa-plus wbdv-create"></i>
         <i class="fa-2x fa fa-check wbdv-update"></i>
     </span></td>
-  </tr>
-  <tbody id="tablerows" class="wbdv-tbody">
-  <tr class="wbdv-template wbdv-user wbdv-hidden">
-    <td class="wbdv-username">adaaa</td>
-    <td>&nbsp;</td>
-    <td class="wbdv-first-name">Ada</td>
-    <td class="wbdv-last-name">Lovelace</td>
-    <td class="wbdv-role">FACULTY</td>
-    <td class="wbdv-actions">
+    </tr>
+    <tbody id="tablerows" class="wbdv-tbody">
+    <tr class="wbdv-template wbdv-user wbdv-hidden">
+      <td class="wbdv-username">adaaa</td>
+      <td>&nbsp;</td>
+      <td class="wbdv-first-name">Ada</td>
+      <td class="wbdv-last-name">Lovelace</td>
+      <td class="wbdv-role">FACULTY</td>
+      <td class="wbdv-actions">
           <span class="pull-right">
             <i id="removeBtnId" class="fa-2x fa fa-times wbdv-remove"></i>
             <i class="fa-2x fa fa-pencil wbdv-edit"></i>
           </span>
-    </td>
-  </tr>
-  </tbody>
-</table>
-<!--</div>-->
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
 </body>
 </html>

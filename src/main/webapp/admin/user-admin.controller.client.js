@@ -18,18 +18,18 @@ function createUser() {
   }
 
   // console.log(newUser)
-  console.log(111)
 
   adminUserService.createUser(newUser)
   .then(function (actualUser) {
     users.push(actualUser)
     renderUsers(users)
   })
+  console.log(111)
   $usernameFld.val("")
   $passwordFld.val("")
   $firstNameFld.val("")
   $lastNameFld.val("")
-  $roleFld.val("")
+  $roleFld.val("Faculty")
 }
 
 function renderUsers(users) {
@@ -38,6 +38,21 @@ function renderUsers(users) {
   for (var i = 0; i < users.length; i++) {
     var user = users[i]
     $tbody
+    // .append(`
+    //   <tr>
+    //       <td class="wbdv-username">${user.username}</td>
+    //       <td>&nbsp;</td>
+    //       <td class="wbdv-first-name">${user.firstName}</td>
+    //       <td class="wbdv-last-name">${user.lastName}</td>
+    //       <td class="wbdv-role">${user.role}</td>
+    //       <td class="wbdv-actions">
+    //         <span class="float-right">
+    //           <i id="${i}" class="fa-2x fa fa-times wbdv-remove"></i>
+    //           <i id="${user._id}" class="fa-2x fa fa-pencil wbdv-edit"></i>
+    //         <span>
+    //       </td>
+    //   </tr>
+    //   `)
     .append(`
       <tr>
           <td>${user.username}</td>
@@ -46,8 +61,10 @@ function renderUsers(users) {
           <td>${user.lastName}</td>
           <td>${user.role}</td>
           <td>
+            <span class="float-right">
               <i id="${i}" class="fa-2x fa fa-times wbdv-remove"></i>
               <i id="${user._id}" class="fa-2x fa fa-pencil wbdv-edit"></i>
+            <span>
           </td>
       </tr>
       `)
@@ -74,6 +91,7 @@ var selectedUser = null
 function selectUser(event) {
   var id = $(event.target).attr("id")
   console.log(id)
+  console.log(users)
   selectedUser = users.find(user => user._id === id)
   $usernameFld.val(selectedUser.username)
   $passwordFld.val(selectedUser.password)
@@ -83,23 +101,26 @@ function selectUser(event) {
 }
 
 function updateUser() {
-  alert(`update user: ${selectedUser.username}`)
+  // alert(`update user: ${selectedUser.username}`)
   selectedUser.username = $usernameFld.val()
   selectedUser.password = $passwordFld.val()
   selectedUser.firstName = $firstNameFld.val()
   selectedUser.lastName = $lastNameFld.val()
   selectedUser.role = $roleFld.val()
+  console.log(selectedUser)
+  $usernameFld.val("")
+  $passwordFld.val("")
+  $firstNameFld.val("")
+  $lastNameFld.val("")
+  $roleFld.val("Faculty")
+
   adminUserService.updateUser(selectedUser._id, selectedUser).then(status => {
     var index = users.findIndex(user => user._id === selectedUser._id)
     users[index] = selectedUser
     renderUsers(users)
   })
-  $usernameFld.val("")
-  $passwordFld.val("")
-  $firstNameFld.val("")
-  $lastNameFld.val("")
-  $roleFld.val("")
   selectedUser = null
+
 }
 
 function main() {
