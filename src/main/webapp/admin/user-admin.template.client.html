@@ -17,6 +17,12 @@
 </head>
 <body>
 <!--<div class="container">-->
+<div class="form-group-row">
+  <h1 class="col-6">
+    User Admin
+  </h1>
+  <a href="../index.html" class="float-right" style="color:black">home</a>
+</div>
 <table class="table">
   <thead>
   <tr>
@@ -30,7 +36,7 @@
   <tr class="wbdv-form">
     <td><input id="usernameFld" class="form-control"
                placeholder="Username"/></td>
-    <td><input id="passwordFld" class="form-control"
+    <td><input id="passwordFld" type="password" class="form-control"
                placeholder="Password"/></td>
     <td><input id="firstNameFld" class="form-control"
                placeholder="First Name"/></td>
@@ -42,6 +48,7 @@
       <option value="ADMIN">Admin</option>
     </select></td>
     <td><span class="pull-right" style="white-space: nowrap">
+        <i class="fa-2x fa fa-search wbdv-search"></i>
         <i id="createBtnId" class="fa-2x fa fa-plus wbdv-create"></i>
         <i class="fa-2x fa fa-check wbdv-update"></i>
     </span></td>

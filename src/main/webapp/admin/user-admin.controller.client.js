@@ -41,7 +41,7 @@ function renderUsers(users) {
     .append(`
       <tr>
           <td>${user.username}</td>
-          <td>${user.password}</td>
+          <td>&nbsp;</td>
           <td>${user.firstName}</td>
           <td>${user.lastName}</td>
           <td>${user.role}</td>
@@ -95,18 +95,6 @@ function updateUser() {
     renderUsers(users)
   })
 }
-
-// function updateCourse() {
-//   selectedCourse.title = $titleFld.val()
-//   selectedCourse.semester = $semesterFld.val()
-//   selectedCourse.seats = $seatsFld.val()
-//   courseService.updateCourse(selectedCourse._id, selectedCourse)
-//   .then(status => {
-//     var index = courses.findIndex(course => course._id === selectedCourse._id)
-//     courses[index] = selectedCourse
-//     renderCourses(courses)
-//   })
-// }
 
 function main() {
   $createBtn = jQuery("#createBtnId")
