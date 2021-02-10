@@ -8,7 +8,7 @@ var adminUserService = new AdminUserServiceClient()
 // console.log(users)
 
 function createUser() {
-  alert("create course")
+  alert("create user")
   var newUser = {
     username: $usernameFld.val(),
     password: $passwordFld.val(),
@@ -75,7 +75,7 @@ function renderUsers(users) {
 }
 
 function deleteUser(event) {
-  alert("delete course")
+  alert("delete user")
   var button = $(event.target)
   var index = button.attr("id")
   var id = users[index]._id
@@ -108,17 +108,16 @@ function updateUser() {
   selectedUser.lastName = $lastNameFld.val()
   selectedUser.role = $roleFld.val()
   console.log(selectedUser)
-  $usernameFld.val("")
-  $passwordFld.val("")
-  $firstNameFld.val("")
-  $lastNameFld.val("")
-  $roleFld.val("Faculty")
-
   adminUserService.updateUser(selectedUser._id, selectedUser).then(status => {
     var index = users.findIndex(user => user._id === selectedUser._id)
     users[index] = selectedUser
   })
   renderUsers(users)
+  $usernameFld.val("")
+  $passwordFld.val("")
+  $firstNameFld.val("")
+  $lastNameFld.val("")
+  $roleFld.val("Faculty")
   selectedUser = null
 
 }
