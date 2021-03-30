@@ -1,27 +1,61 @@
 package com.example.wbdvsp2102luyingserverjava.models;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "widgets")
 public class Widget {
 
-  private String id;
-  private String name;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
   private String topicId;
-  private Integer widgetOrder;
-  private String url;
-  private Integer width;
-  private Integer height;
-  private String cssClass;
-  private String style;
-  private String value;
+  private String name;
   private String type;
   private Integer size;
   private String text;
 
-  public Widget(String id, String topicId, String type, Integer size, String text) {
+  private Integer width;
+  private Integer height;
+  private String src;
+  private Boolean ordered;
+
+
+  private Integer widgetOrder;
+
+  private String url;
+
+  private String cssClass;
+  private String style;
+  private String value;
+
+
+  public Widget(Long id, String topicId, String type, Integer size, String text) {
     this.id = id;
     this.topicId = topicId;
     this.type = type;
     this.size = size;
     this.text = text;
+  }
+
+  public String getSrc() {
+    return src;
+  }
+
+  public void setSrc(String src) {
+    this.src = src;
+  }
+
+  public Boolean getOrdered() {
+    return ordered;
+  }
+
+  public void setOrdered(Boolean ordered) {
+    this.ordered = ordered;
   }
 
   public String getName() {
@@ -88,11 +122,11 @@ public class Widget {
     this.value = value;
   }
 
-  public String getId() {
+  public Long getId() {
     return id;
   }
 
-  public void setId(String id) {
+  public void setId(Long id) {
     this.id = id;
   }
 
